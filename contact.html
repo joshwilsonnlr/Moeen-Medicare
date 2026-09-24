@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & Book an Appointment | Lumina Physiotherapy</title>
+  <meta name="description" content="Contact Lumina Physiotherapy or request an appointment. Simple form, clear contact details, and a calm path to booking your physiotherapy session." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    @media (max-width: 900px) {
+      .contact-layout { grid-template-columns: 1fr !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo"><span class="logo-mark">L</span> Lumina Physiotherapy</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="team.html">Our Team</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="contact.html" class="btn btn-primary">Book an Appointment</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <div class="mobile-nav">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+    <a href="team.html">Our Team</a><a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary" style="margin-top:1rem;">Book an Appointment</a>
+  </div>
+
+  <section class="page-hero">
+    <div class="container fade-up">
+      <span class="eyebrow" style="display:block;margin-bottom:0.75rem;">Get in Touch</span>
+      <h1>Book an appointment</h1>
+      <p>Request a session or ask a question. We’ll respond as soon as possible to help you take the next step.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-info-grid fade-up">
+        <div class="contact-info-card">
+          <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <h3>Clinic Address</h3>
+          <p>[Street Address]<br>[City], [Region / Postal Code]</p>
+        </div>
+        <div class="contact-info-card">
+          <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          <h3>Phone</h3>
+          <p><a href="tel:[Phone]">[Phone Number]</a></p>
+        </div>
+        <div class="contact-info-card">
+          <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <h3>Email</h3>
+          <p><a href="mailto:[Email]">[Email Address]</a></p>
+        </div>
+        <div class="contact-info-card">
+          <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <h3>Hours</h3>
+          <p>[Weekday hours]<br>[Weekend hours if applicable]</p>
+        </div>
+      </div>
+
+      <div class="contact-layout" style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:3rem;align-items:start;">
+        <div class="form-card fade-up">
+          <h2 style="margin-bottom:0.5rem;font-size:1.6rem;">Request an Appointment</h2>
+          <p style="margin-bottom:1.75rem;font-size:0.98rem;">Complete the form and we’ll be in touch to confirm availability. This is a request only — an appointment is not confirmed until we respond.</p>
+
+          <form id="appointment-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required placeholder="Your name" />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required placeholder="[Phone format]" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required placeholder="you@example.com" />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="date">Preferred Date</label>
+                <input type="date" id="date" name="date" />
+              </div>
+              <div class="form-group">
+                <label for="time">Preferred Time</label>
+                <select id="time" name="time">
+                  <option value="">Select a time</option>
+                  <option>Morning</option>
+                  <option>Midday</option>
+                  <option>Afternoon</option>
+                  <option>Evening</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="service">Type of Service</label>
+              <select id="service" name="service">
+                <option value="">Select a service</option>
+                <option>Sports Injury Rehabilitation</option>
+                <option>Back & Neck Pain Treatment</option>
+                <option>Post-Surgery Rehabilitation</option>
+                <option>Musculoskeletal Physiotherapy</option>
+                <option>Joint Pain & Mobility</option>
+                <option>Posture Correction</option>
+                <option>Manual Therapy</option>
+                <option>Exercise-Based Rehabilitation</option>
+                <option>General Assessment / Not sure</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message (optional)</label>
+              <textarea id="message" name="message" rows="4" placeholder="Briefly describe your concern or any relevant details..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Submit Appointment Request</button>
+            <p class="form-note">By submitting, you agree that we may contact you regarding this request. We respect your privacy and will not share your information.</p>
+          </form>
+
+          <div id="form-success" class="form-success">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <h3>Request received</h3>
+            <p>Thank you. Your appointment request has been submitted. We will review it and contact you shortly to confirm availability and next steps. This does not confirm a booked appointment.</p>
+            <a href="index.html" class="btn btn-primary" style="margin-top:1.5rem;">Return to Home</a>
+          </div>
+        </div>
+
+        <div class="fade-up stagger-1">
+          <div style="background:white;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);margin-bottom:1.5rem;">
+            <div style="aspect-ratio:4/3;background:var(--accent);display:grid;place-items:center;color:var(--text-muted);font-size:0.95rem;padding:2rem;text-align:center;">
+              <div>
+                <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="margin:0 auto 0.75rem;"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                <p><strong>Map Placeholder</strong><br>Replace with Google Maps embed for<br>[Clinic Address], [City]</p>
+              </div>
+            </div>
+          </div>
+          <div style="background:white;padding:1.75rem;border-radius:16px;box-shadow:var(--shadow);">
+            <h3 style="font-family:var(--font-body);font-size:1.05rem;margin-bottom:0.75rem;">Need to speak with us first?</h3>
+            <p style="font-size:0.95rem;margin-bottom:1rem;">Call or email and we’ll be happy to answer questions about services, availability, or what to expect.</p>
+            <p style="font-size:0.95rem;"><strong>Phone:</strong> [Phone Number]<br><strong>Email:</strong> [Email Address]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><span class="logo-mark">L</span> Lumina Physiotherapy</a>
+          <p>Modern physiotherapy focused on personalized care and lasting results.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <div class="footer-links">
+            <a href="about.html">About Us</a><a href="services.html">Services</a>
+            <a href="team.html">Our Team</a><a href="contact.html">Book Appointment</a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <div class="footer-links">
+            <a href="services.html">Sports Rehabilitation</a><a href="services.html">Back & Neck Care</a>
+            <a href="services.html">Post-Surgery Rehab</a><a href="services.html">Manual Therapy</a>
+          </div>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-contact">
+            <li>[Street Address], [City], [Region]</li>
+            <li>[Phone Number]</li>
+            <li>[Email Address]</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© [Year] Lumina Physiotherapy. All rights reserved.</span>
+        <div class="social-links"><a href="#">IG</a><a href="#">FB</a><a href="#">IN</a></div>
+      </div>
+    </div>
+  </footer>
+  <div class="mobile-cta"><a href="contact.html" class="btn btn-primary">Book an Appointment</a></div>
+  <script src="js/main.js"></script>
+</body>
+</html>
