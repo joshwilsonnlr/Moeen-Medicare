@@ -4,7 +4,7 @@ LUMINA PHYSIOTHERAPY — FINAL WEBSITE PACKAGE
 HOW TO OPEN
 -----------
 1. Unzip this file
-2. Open the folder lumina-physio
+2. Open the folder "lumina-physio"
 3. Double-click index.html (keep css/ and js/ folders next to the HTML files)
 4. Internet needed for fonts and images
 
@@ -41,7 +41,6 @@ IMPORTANT SETUP
 DESIGN
 ------
 - Primary: Deep Teal #164E50
-- Buttons: Dark #0B3335 with white text
 - Secondary: Sage Green #A8C3B0
 - Background: Warm Off-White #F8F7F2
 - Responsive, animations, mobile menu, sticky CTA
