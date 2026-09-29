@@ -1,46 +1,60 @@
-LUMINA PHYSIOTHERAPY — FINAL WEBSITE PACKAGE
-============================================
+===============================================
+  MOEEN MEDICARE & INFERTILITY HOSPITAL
+  Physiotherapy Department Website
+===============================================
 
-HOW TO OPEN
------------
-1. Unzip this file
-2. Open the folder "lumina-physio"
-3. Double-click index.html (keep css/ and js/ folders next to the HTML files)
-4. Internet needed for fonts and images
+HOW TO OPEN THE WEBSITE
+-----------------------
+1. Unzip this folder completely.
+2. Open the folder "moeen-medicare-website".
+3. Double-click "index.html" to view in your browser.
 
-PAGES
------
-- index.html      → Home
-- about.html      → About
-- services.html   → Services
-- treatment.html  → Treatments
-- team.html       → Our Team
-- contact.html    → Contact + Appointment Form
+IMPORTANT:
+- Keep the "css" and "js" folders next to the HTML files.
+- Do not move individual HTML files out of this folder.
+- Internet connection is needed for Google Fonts and images.
 
-IMPORTANT SETUP
----------------
-1. FORM (Formspree)
-   - Open contact.html
-   - Find: action="https://formspree.io/f/YOUR_FORM_ID"
-   - Replace YOUR_FORM_ID with your Formspree form ID
-   - Get free form at: https://formspree.io
+PAGES INCLUDED
+--------------
+- index.html      → Home / Landing page
+- about.html      → About the clinic & approach
+- services.html   → All physiotherapy services
+- treatment.html  → What to expect in treatment
+- team.html       → Dr. Ramsha Ramzan profile
+- contact.html    → Contact info + appointment form
 
-2. REPLACE ALL PLACEHOLDERS
-   - [Street Address], [City], [Region]
-   - [Phone Number], [Email Address]
-   - [Physiotherapist Name], [Professional Title]
-   - [Year], business hours, etc.
+DETAILS USED
+------------
+Clinic Name : Moeen Medicare and Infertility Hospital
+Doctor      : Dr. Ramsha Ramzan, Doctor of Physical Therapy (DPT)
+Phone       : 0312-7114451
+Email       : ramshaaramzan@gmail.com
+Address     : 22-C, Rafi Qamar Road, Kanju Chowk, Satellite Town, Bahawalpur, Punjab
+Hours       : Approximately 6 hours daily (please confirm exact times)
 
-3. GOOGLE MAP (Footer)
-   - Replace the iframe embed with your real Google Maps embed code
+NOTE ON HOURS
+-------------
+You provided "6 hours". The website currently shows 
+"Approximately 6 hours daily – Please call to confirm exact timing".
+Update the hours on contact.html and footer once you have the exact schedule.
 
-4. IMAGES
-   - Modest professional clinical photos
-   - Suitable for Pakistan audience
+SEO
+---
+Pages include local SEO for:
+- Physiotherapy Bahawalpur
+- Physical Therapy Bahawalpur
+- Dr Ramsha Ramzan
+- Back pain / Sports injury / Post-surgery rehab in Bahawalpur
 
-DESIGN
-------
-- Primary: Deep Teal #164E50
-- Secondary: Sage Green #A8C3B0
-- Background: Warm Off-White #F8F7F2
-- Responsive, animations, mobile menu, sticky CTA
+TO GO LIVE
+----------
+Upload the entire folder to any web hosting (Netlify, Vercel, 
+GitHub Pages, or traditional hosting). Point your domain to it.
+
+CUSTOMIZATION
+-------------
+- Replace Unsplash images with your own clinic photos.
+- Update exact business hours.
+- Connect the appointment form to email (e.g. Formspree) if needed.
+
+© 2026 Moeen Medicare and Infertility Hospital
