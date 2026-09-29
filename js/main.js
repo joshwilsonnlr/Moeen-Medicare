@@ -1,124 +1,105 @@
-/* Lumina Physiotherapy — Interactions */
+/* Moeen Medicare - Main JavaScript */
 
-document.addEventListener('DOMContentLoaded', () => {
-  // Sticky nav
-  const nav = document.querySelector('.nav');
-  const onScroll = () => {
-    if (window.scrollY > 40) nav.classList.add('scrolled');
-    else nav.classList.remove('scrolled');
-  };
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-
-  // Mobile menu
-  const toggle = document.querySelector('.menu-toggle');
-  const mobileNav = document.querySelector('.mobile-nav');
-  if (toggle && mobileNav) {
-    toggle.addEventListener('click', () => {
-      mobileNav.classList.toggle('open');
-      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+document.addEventListener('DOMContentLoaded', function () {
+  // Sticky Navbar
+  const navbar = document.querySelector('.navbar');
+  if (navbar) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
     });
-    mobileNav.querySelectorAll('a').forEach(link => {
+  }
+
+  // Mobile Menu
+  const toggle = document.querySelector('.mobile-toggle');
+  const mobileMenu = document.querySelector('.mobile-menu');
+  const overlay = document.querySelector('.mobile-overlay');
+
+  if (toggle && mobileMenu && overlay) {
+    toggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      overlay.classList.toggle('open');
+      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+    });
+
+    overlay.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        mobileNav.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        overlay.classList.remove('open');
         document.body.style.overflow = '';
       });
     });
   }
 
-  // FAQ accordion
+  // FAQ Accordion
   document.querySelectorAll('.faq-question').forEach(btn => {
     btn.addEventListener('click', () => {
-      const item = btn.closest('.faq-item');
+      const item = btn.parentElement;
+      const answer = item.querySelector('.faq-answer');
       const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-      if (!isOpen) item.classList.add('open');
-    });
-  });
 
-  // Scroll reveal — skip already-visible critical sections
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+      // Close all
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-answer').style.maxHeight = null;
+      });
+
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
       }
     });
-  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
-
-  document.querySelectorAll('.fade-up').forEach(el => {
-    // Immediately show elements already in (or near) the viewport on load
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight * 0.95) {
-      el.classList.add('visible');
-    } else {
-      observer.observe(el);
-    }
   });
 
-  // Appointment form (works with Formspree)
-  const form = document.getElementById('appointment-form');
-  if (form) {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const required = form.querySelectorAll('[required]');
-      let valid = true;
-      required.forEach(field => {
-        if (!field.value.trim()) {
-          valid = false;
-          field.style.borderColor = '#c45c5c';
-        } else {
-          field.style.borderColor = '';
+  // Scroll Fade-up Animation
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
         }
       });
-      if (!valid) return;
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+  );
 
-      const btn = form.querySelector('.form-submit-btn');
-      const originalText = btn ? btn.textContent : '';
-      if (btn) {
-        btn.disabled = true;
-        btn.textContent = 'Sending...';
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Make hero content visible immediately
+  document.querySelectorAll('.hero .fade-up, .page-hero .fade-up').forEach(el => {
+    el.classList.add('visible');
+  });
+
+  // Appointment Form
+  const form = document.getElementById('appointment-form');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = form.querySelector('[name="name"]').value.trim();
+      const phone = form.querySelector('[name="phone"]').value.trim();
+      const email = form.querySelector('[name="email"]').value.trim();
+
+      if (!name || !phone) {
+        alert('Please fill in your name and phone number.');
+        return;
       }
 
-      try {
-        const action = form.getAttribute('action');
-        // If still using placeholder, show success for demo
-        if (!action || action.includes('YOUR_FORM_ID')) {
-          form.style.display = 'none';
-          const success = document.getElementById('form-success');
-          if (success) {
-            success.hidden = false;
-            success.classList.add('visible');
-          }
-          return;
-        }
-
-        const response = await fetch(action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { 'Accept': 'application/json' }
-        });
-
-        if (response.ok) {
-          form.style.display = 'none';
-          const success = document.getElementById('form-success');
-          if (success) {
-            success.hidden = false;
-            success.classList.add('visible');
-          }
-        } else {
-          alert('Something went wrong. Please try again or call us directly.');
-          if (btn) {
-            btn.disabled = false;
-            btn.textContent = originalText;
-          }
-        }
-      } catch (err) {
-        alert('Something went wrong. Please try again or call us directly.');
-        if (btn) {
-          btn.disabled = false;
-          btn.textContent = originalText;
-        }
+      // Show success message
+      const success = document.getElementById('form-success');
+      if (success) {
+        success.classList.add('show');
+        form.reset();
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
     });
   }
