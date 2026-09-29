@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Physiotherapy Services Bahawalpur | Moeen Medicare Hospital</title>
-  <link rel="icon" type="image/png" href="mg\TabLogo.png">
-  <meta name="description" content="Physiotherapy services in Bahawalpur: sports injury rehab, back & neck pain, post-surgery rehabilitation, joint mobility, posture correction and more by Dr. Ramsha Ramzan.">
+  <meta name="description" content="Physiotherapy services in Bahawalpur: sports injury rehab, back pain relief, post-surgery rehabilitation, joint mobility, posture correction, and more by Dr. Ramsha Ramzan.">
+  <meta name="keywords" content="physiotherapy services Bahawalpur, sports injury rehabilitation, back pain treatment, post-surgery rehabilitation, joint pain treatment, posture correction, physiotherapist Bahawalpur">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Physiotherapy Services in Bahawalpur | Moeen Medicare">
+  <meta property="og:description" content="Comprehensive rehabilitation and pain management services in Bahawalpur for sports injuries, spinal pain, and recovery after surgery.">
+  <meta property="og:type" content="website">
+  <title>Physiotherapy Services in Bahawalpur | Moeen Medicare</title>
+  <link rel="canonical" href="https://moeenmedicare.com/services.html">
+  <link rel="icon" type="image/png" href="mg/TabLogo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -13,9 +19,9 @@
 </head>
 <body>
 
-  <nav class="navbar">
+  <nav class="navbar" role="navigation" aria-label="Main Navigation">
     <div class="container nav-inner">
-      <a href="index.html" class="logo">
+      <a href="index.html" class="logo" aria-label="Moeen Medicare Home">
         <span class="logo-name">Moeen Medicare</span>
         <span class="logo-tag">Physiotherapy Department</span>
       </a>
@@ -23,160 +29,166 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="team.html">Our Doctor</a></li>
+        <li><a href="team.html">Our Physiotherapist</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <a href="contact.html" class="btn btn-primary btn-sm">Book Appointment</a>
-      <button class="mobile-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <button class="mobile-toggle" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
     </div>
   </nav>
 
-  <div class="mobile-overlay"></div>
-  <div class="mobile-menu">
+  <div class="mobile-overlay" role="presentation"></div>
+  <div class="mobile-menu" role="navigation" aria-label="Mobile Navigation">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="services.html">Services</a>
-    <a href="team.html">Our Doctor</a>
+    <a href="team.html">Our Physiotherapist</a>
     <a href="contact.html">Contact</a>
     <a href="contact.html" class="btn btn-primary" style="margin-top:24px;text-align:center;">Book Appointment</a>
   </div>
 
-  <section class="page-hero">
-    <div class="container fade-up">
-      <h1>Our Physiotherapy Services</h1>
-      <p>Comprehensive rehabilitation and pain management services in Bahawalpur.</p>
-    </div>
-  </section>
+  <main>
+    <section class="page-hero" aria-labelledby="services-page-title">
+      <div class="container fade-up">
+        <h1 id="services-page-title">Our Physiotherapy Services</h1>
+        <p>Comprehensive rehabilitation and pain management services in Bahawalpur.</p>
+      </div>
+    </section>
 
-  <section>
-    <div class="container">
-      <div class="services-grid">
-        <div class="service-card fade-up">
-          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=80" alt="Physiotherapist guiding sports injury rehabilitation in a clinic">
-          <div class="service-card-body">
-            <h3>Sports Injury Rehabilitation</h3>
-            <p>Recovery programs for sprains, strains, ligament injuries and return-to-sport planning.</p>
-            <ul style="font-size:0.9rem;color:var(--text-light);margin-bottom:16px;padding-left:18px;">
-              <li>Injury assessment</li>
-              <li>Strength & conditioning</li>
-              <li>Gradual return to activity</li>
-            </ul>
-            <a href="contact.html" class="btn btn-outline btn-sm">Book Appointment</a>
-          </div>
+    <section aria-labelledby="services-list-heading">
+      <div class="container">
+        <div class="section-header fade-up">
+          <span class="section-label">Treatments</span>
+          <h2 id="services-list-heading">Evidence-Based Physiotherapy Care</h2>
         </div>
+        <div class="services-grid">
+          <article class="service-card fade-up">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=80" alt="Physiotherapist guiding sports injury rehabilitation in a clinic" loading="lazy">
+            <div class="service-card-body">
+              <h3>Sports Injury Rehabilitation</h3>
+              <p>Recovery programs for sprains, strains, ligament injuries and return-to-sport planning.</p>
+              <ul style="font-size:0.9rem;color:var(--text-light);margin-bottom:16px;padding-left:18px;">
+                <li>Injury assessment</li>
+                <li>Strength & conditioning</li>
+                <li>Gradual return to activity</li>
+              </ul>
+              <a href="contact.html" class="btn btn-outline btn-sm">Book Appointment</a>
+            </div>
+          </article>
 
-        <div class="service-card fade-up">
-          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80" alt="Physiotherapy clinic treatment for back and neck pain">
-          <div class="service-card-body">
-            <h3>Back & Neck Pain Treatment</h3>
-            <p>Targeted care for acute and chronic spinal pain, stiffness and related symptoms.</p>
-            <ul style="font-size:0.9rem;color:var(--text-light);margin-bottom:16px;padding-left:18px;">
-              <li>Posture assessment</li>
-              <li>Manual therapy</li>
-              <li>Movement education</li>
-            </ul>
-            <a href="contact.html" class="btn btn-outline btn-sm">Book Appointment</a>
-          </div>
-        </div>
+          <article class="service-card fade-up">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80" alt="Physiotherapy clinic treatment for back and neck pain" loading="lazy">
+            <div class="service-card-body">
+              <h3>Back & Neck Pain Treatment</h3>
+              <p>Targeted care for acute and chronic spinal pain, stiffness and related symptoms.</p>
+              <ul style="font-size:0.9rem;color:var(--text-light);margin-bottom:16px;padding-left:18px;">
+                <li>Posture assessment</li>
+                <li>Manual therapy</li>
+                <li>Movement education</li>
+              </ul>
+              <a href="contact.html" class="btn btn-outline btn-sm">Book Appointment</a>
+            </div>
+          </article>
 
-        <div class="service-card fade-up">
-          <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=900&q=80" alt="Patient receiving post-surgery physiotherapy rehabilitation in a clinic">
-          <div class="service-card-body">
-            <h3>Post-Surgery Rehabilitation</h3>
-            <p>Structured recovery after orthopedic and other surgeries to restore strength and function.</p>
-            <ul style="font-size:0.9rem;color:var(--text-light);margin-bottom:16px;padding-left:18px;">
-              <li>Early mobilization</li>
-              <li>Progressive strengthening</li>
-              <li>Scar & swelling management</li>
-            </ul>
-            <a href="contact.html" class="btn btn-outline btn-sm">Book Appointment</a>
-          </div>
-        </div>
+          <article class="service-card fade-up">
+            <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=900&q=80" alt="Patient receiving post-surgery physiotherapy rehabilitation in a clinic" loading="lazy">
+            <div class="service-card-body">
+              <h3>Post-Surgery Rehabilitation</h3>
+              <p>Structured recovery after orthopedic and other surgeries to restore strength and function.</p>
+              <ul style="font-size:0.9rem;color:var(--text-light);margin-bottom:16px;padding-left:18px;">
+                <li>Early mobilization</li>
+                <li>Progressive strengthening</li>
+                <li>Scar & swelling management</li>
+              </ul>
+              <a href="contact.html" class="btn btn-outline btn-sm">Book Appointment</a>
+            </div>
+          </article>
 
-        <div class="service-card fade-up">
-          <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=80" alt="Physiotherapist helping a patient improve joint mobility">
-          <div class="service-card-body">
-            <h3>Musculoskeletal Physiotherapy</h3>
-            <p>Assessment and treatment of muscle, joint and soft-tissue conditions affecting daily movement.</p>
-            <ul style="font-size:0.9rem;color:var(--text-light);margin-bottom:16px;padding-left:18px;">
-              <li>Soft tissue techniques</li>
-              <li>Joint mobilization</li>
-              <li>Functional exercise</li>
-            </ul>
-            <a href="contact.html" class="btn btn-outline btn-sm">Book Appointment</a>
-          </div>
-        </div>
+          <article class="service-card fade-up">
+            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=80" alt="Physiotherapist helping a patient improve joint mobility" loading="lazy">
+            <div class="service-card-body">
+              <h3>Musculoskeletal Physiotherapy</h3>
+              <p>Assessment and treatment of muscle, joint and soft-tissue conditions affecting daily movement.</p>
+              <ul style="font-size:0.9rem;color:var(--text-light);margin-bottom:16px;padding-left:18px;">
+                <li>Soft tissue techniques</li>
+                <li>Joint mobilization</li>
+                <li>Functional exercise</li>
+              </ul>
+              <a href="contact.html" class="btn btn-outline btn-sm">Book Appointment</a>
+            </div>
+          </article>
 
-        <div class="service-card fade-up">
-          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=900&q=80" alt="Guided exercise for joint pain and mobility treatment">
-          <div class="service-card-body">
-            <h3>Joint Pain & Mobility Treatment</h3>
-            <p>Improve comfort and range of motion in knees, shoulders, hips and other joints.</p>
-            <ul style="font-size:0.9rem;color:var(--text-light);margin-bottom:16px;padding-left:18px;">
-              <li>Mobility exercises</li>
-              <li>Pain management strategies</li>
-              <li>Activity modification advice</li>
-            </ul>
-            <a href="contact.html" class="btn btn-outline btn-sm">Book Appointment</a>
-          </div>
-        </div>
+          <article class="service-card fade-up">
+            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=900&q=80" alt="Guided exercise for joint pain and mobility treatment" loading="lazy">
+            <div class="service-card-body">
+              <h3>Joint Pain & Mobility Treatment</h3>
+              <p>Improve comfort and range of motion in knees, shoulders, hips and other joints.</p>
+              <ul style="font-size:0.9rem;color:var(--text-light);margin-bottom:16px;padding-left:18px;">
+                <li>Mobility exercises</li>
+                <li>Pain management strategies</li>
+                <li>Activity modification advice</li>
+              </ul>
+              <a href="contact.html" class="btn btn-outline btn-sm">Book Appointment</a>
+            </div>
+          </article>
 
-        <div class="service-card fade-up">
-          <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80" alt="Physiotherapy exercises for posture correction in a clinic">
-          <div class="service-card-body">
-            <h3>Posture Correction</h3>
-            <p>Assessment and correction of postural habits that contribute to pain and fatigue.</p>
-            <ul style="font-size:0.9rem;color:var(--text-light);margin-bottom:16px;padding-left:18px;">
-              <li>Workstation advice</li>
-              <li>Core & postural muscle training</li>
-              <li>Awareness techniques</li>
-            </ul>
-            <a href="contact.html" class="btn btn-outline btn-sm">Book Appointment</a>
-          </div>
-        </div>
+          <article class="service-card fade-up">
+            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80" alt="Physiotherapy exercises for posture correction in a clinic" loading="lazy">
+            <div class="service-card-body">
+              <h3>Posture Correction</h3>
+              <p>Assessment and correction of postural habits that contribute to pain and fatigue.</p>
+              <ul style="font-size:0.9rem;color:var(--text-light);margin-bottom:16px;padding-left:18px;">
+                <li>Workstation advice</li>
+                <li>Core & postural muscle training</li>
+                <li>Awareness techniques</li>
+              </ul>
+              <a href="contact.html" class="btn btn-outline btn-sm">Book Appointment</a>
+            </div>
+          </article>
 
-        <div class="service-card fade-up">
-          <img src="https://images.unsplash.com/photo-1542736667-069246bdbc6d?auto=format&fit=crop&w=900&q=80" alt="Hands-on manual physiotherapy treatment in a clinic">
-          <div class="service-card-body">
-            <h3>Manual Therapy</h3>
-            <p>Hands-on techniques to improve joint mobility, reduce muscle tension and support recovery.</p>
-            <ul style="font-size:0.9rem;color:var(--text-light);margin-bottom:16px;padding-left:18px;">
-              <li>Joint mobilization</li>
-              <li>Soft tissue release</li>
-              <li>Combined with exercise</li>
-            </ul>
-            <a href="contact.html" class="btn btn-outline btn-sm">Book Appointment</a>
-          </div>
-        </div>
+          <article class="service-card fade-up">
+            <img src="https://images.unsplash.com/photo-1542736667-069246bdbc6d?auto=format&fit=crop&w=900&q=80" alt="Hands-on manual physiotherapy treatment in a clinic" loading="lazy">
+            <div class="service-card-body">
+              <h3>Manual Therapy</h3>
+              <p>Hands-on techniques to improve joint mobility, reduce muscle tension and support recovery.</p>
+              <ul style="font-size:0.9rem;color:var(--text-light);margin-bottom:16px;padding-left:18px;">
+                <li>Joint mobilization</li>
+                <li>Soft tissue release</li>
+                <li>Combined with exercise</li>
+              </ul>
+              <a href="contact.html" class="btn btn-outline btn-sm">Book Appointment</a>
+            </div>
+          </article>
 
-        <div class="service-card fade-up">
-          <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=900&q=80" alt="Exercise-based physiotherapy rehabilitation session">
-          <div class="service-card-body">
-            <h3>Exercise-Based Rehabilitation</h3>
-            <p>Customized exercise programs to rebuild strength, stability and confidence in movement.</p>
-            <ul style="font-size:0.9rem;color:var(--text-light);margin-bottom:16px;padding-left:18px;">
-              <li>Progressive loading</li>
-              <li>Home exercise plans</li>
-              <li>Functional training</li>
-            </ul>
-            <a href="contact.html" class="btn btn-outline btn-sm">Book Appointment</a>
-          </div>
+          <article class="service-card fade-up">
+            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=900&q=80" alt="Exercise-based physiotherapy rehabilitation session" loading="lazy">
+            <div class="service-card-body">
+              <h3>Exercise-Based Rehabilitation</h3>
+              <p>Customized exercise programs to rebuild strength, stability and confidence in movement.</p>
+              <ul style="font-size:0.9rem;color:var(--text-light);margin-bottom:16px;padding-left:18px;">
+                <li>Progressive loading</li>
+                <li>Home exercise plans</li>
+                <li>Functional training</li>
+              </ul>
+              <a href="contact.html" class="btn btn-outline btn-sm">Book Appointment</a>
+            </div>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section>
-    <div class="container">
-      <div class="cta-banner fade-up">
-        <h2>Not Sure Which Service You Need?</h2>
-        <p>Contact us for an assessment. Dr. Ramsha Ramzan will guide you toward the most suitable care.</p>
-        <a href="contact.html" class="btn btn-white">Book an Assessment</a>
+    <section aria-labelledby="assessment-heading">
+      <div class="container">
+        <div class="cta-banner fade-up">
+          <h2 id="assessment-heading">Not Sure Which Service You Need?</h2>
+          <p>Contact us for an assessment. Dr. Ramsha Ramzan will guide you toward the most suitable care.</p>
+          <a href="contact.html" class="btn btn-white">Book an Assessment</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
@@ -186,30 +198,30 @@
           </div>
           <p>Professional physiotherapy and rehabilitation services in Bahawalpur under the care of Dr. Ramsha Ramzan, Doctor of Physical Therapy.</p>
         </div>
-        <div>
+        <nav>
           <h4>Quick Links</h4>
           <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="team.html">Our Doctor</a></li>
+            <li><a href="team.html">Our Physiotherapist</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
-        </div>
-        <div>
+        </nav>
+        <address>
           <h4>Contact</h4>
           <ul class="footer-links">
             <li>22-C, Rafi Qamar Road</li>
             <li>Kanju Chowk, Satellite Town</li>
             <li>Bahawalpur, Punjab</li>
-            <li style="margin-top:12px;"><a href="tel:03127114451">0312-7114451</a></li>
+            <li style="margin-top:12px;"><a href="tel:+923127114451">0312-7114451</a></li>
             <li><a href="mailto:ramshaaramzan@gmail.com">ramshaaramzan@gmail.com</a></li>
           </ul>
-        </div>
+        </address>
         <div>
           <h4>Find Us</h4>
           <div class="footer-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3476.2700420853034!2d71.7085201!3d29.3916554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x393b90f0b9e1a4e1%3A0x2c915ee3a1f2fc73!2sMoeen%20Medicare!5e0!3m2!1sen!2s!4v1790643837540!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <iframe title="Moeen Medicare Location on Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3476.2700420853034!2d71.7085201!3d29.3916554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x393b90f0b9e1a4e1%3A0x2c" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
@@ -221,6 +233,6 @@
   </footer>
 
   <a href="contact.html" class="mobile-cta">Book Appointment</a>
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
