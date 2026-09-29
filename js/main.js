@@ -79,39 +79,62 @@ document.addEventListener('DOMContentLoaded', function () {
     el.classList.add('visible');
   });
 
-  // Appointment Form with Formspree
+  // Appointment Form with Formspree (custom success without Formspree's default thank-you page)
   const form = document.getElementById('appointment-form');
   const successMessage = document.getElementById('form-success');
-  
+
   if (form) {
     form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
       const name = form.querySelector('[name="name"]').value.trim();
       const phone = form.querySelector('[name="phone"]').value.trim();
 
       if (!name || !phone) {
         alert('Please fill in your name and phone number.');
-        e.preventDefault();
         return;
       }
 
-      // Show success message after form submission to Formspree
-      if (successMessage) {
-        // Show message after a brief delay to allow Formspree to process
-        setTimeout(function () {
-          successMessage.style.display = 'block';
-          successMessage.classList.add('show');
-          
-          // Scroll to success message
-          successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          
-          // Hide form after showing success
-          setTimeout(function () {
-            form.style.opacity = '0.7';
-          }, 500);
-        }, 300);
+      const submitButton = form.querySelector('button[type="submit"]');
+      const originalButtonText = submitButton ? submitButton.textContent : 'Submitting...';
+
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending...';
       }
-      
-      // Allow form to submit to Formspree (don't prevent default)
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Form submission failed');
+          }
+
+          form.reset();
+
+          if (successMessage) {
+            successMessage.style.display = 'block';
+            successMessage.classList.add('show');
+            successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+
+          if (submitButton) {
+            submitButton.disabled = false;
+            submitButton.textContent = originalButtonText;
+          }
+        })
+        .catch(() => {
+          if (submitButton) {
+            submitButton.disabled = false;
+            submitButton.textContent = originalButtonText;
+          }
+          alert('There was a problem sending your appointment request. Please try again or call us directly.');
+        });
     });
   }
 
