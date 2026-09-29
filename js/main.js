@@ -79,28 +79,39 @@ document.addEventListener('DOMContentLoaded', function () {
     el.classList.add('visible');
   });
 
-  // Appointment Form
+  // Appointment Form with Formspree
   const form = document.getElementById('appointment-form');
+  const successMessage = document.getElementById('form-success');
+  
   if (form) {
     form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
       const name = form.querySelector('[name="name"]').value.trim();
       const phone = form.querySelector('[name="phone"]').value.trim();
-      const email = form.querySelector('[name="email"]').value.trim();
 
       if (!name || !phone) {
         alert('Please fill in your name and phone number.');
+        e.preventDefault();
         return;
       }
 
-      // Show success message
-      const success = document.getElementById('form-success');
-      if (success) {
-        success.classList.add('show');
-        form.reset();
-        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // Show success message after form submission to Formspree
+      if (successMessage) {
+        // Show message after a brief delay to allow Formspree to process
+        setTimeout(function () {
+          successMessage.style.display = 'block';
+          successMessage.classList.add('show');
+          
+          // Scroll to success message
+          successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          
+          // Hide form after showing success
+          setTimeout(function () {
+            form.style.opacity = '0.7';
+          }, 500);
+        }, 300);
       }
+      
+      // Allow form to submit to Formspree (don't prevent default)
     });
   }
 
